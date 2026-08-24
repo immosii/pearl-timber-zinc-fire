@@ -1,0 +1,276 @@
+{
+  "title": "روند نرخ خرابی کوهورت (۳ ماهه) — نصب در مقابل تولید",
+  "basis": "نرخ کوهورت نصب = خرابی ظرف ۳ ماه پس از نصب ÷ تعداد نصب همان ماه. نرخ کوهورت تولید = خرابی ظرف ۳ ماه پس از تولید ÷ کل تولید همان ماه (مخرج بزرگ‌تر است چون شامل تولید صادراتی/انبار هم می‌شود، نه فقط واحد‌های نصب‌شده ردیابی‌شده). برای کوهورت‌های اخیر، نرخ ممکن است هنوز کامل نشده باشد چون کمتر از ۳ ماه از آن‌ها گذشته است.",
+  "rows": [
+    {
+      "cohort": "1402/11",
+      "installVolume": 353,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 0,
+      "produceFail3": 0,
+      "produceRate3": null
+    },
+    {
+      "cohort": "1402/12",
+      "installVolume": 547,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 0,
+      "produceFail3": 0,
+      "produceRate3": null
+    },
+    {
+      "cohort": "1403/01",
+      "installVolume": 252,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 0,
+      "produceFail3": 0,
+      "produceRate3": null
+    },
+    {
+      "cohort": "1403/02",
+      "installVolume": 331,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 0,
+      "produceFail3": 0,
+      "produceRate3": null
+    },
+    {
+      "cohort": "1403/03",
+      "installVolume": 424,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 584,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1403/04",
+      "installVolume": 479,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 845,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1403/05",
+      "installVolume": 702,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 4,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1403/06",
+      "installVolume": 431,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 349,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1403/07",
+      "installVolume": 582,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 3346,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1403/08",
+      "installVolume": 866,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 3081,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1403/09",
+      "installVolume": 1040,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 1158,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1403/10",
+      "installVolume": 1218,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 2055,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1403/11",
+      "installVolume": 1326,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 3005,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1403/12",
+      "installVolume": 1942,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 1446,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1404/01",
+      "installVolume": 1056,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 1968,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1404/02",
+      "installVolume": 921,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 2672,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1404/03",
+      "installVolume": 1340,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 2168,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1404/04",
+      "installVolume": 1025,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 1947,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1404/05",
+      "installVolume": 1868,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 2326,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1404/06",
+      "installVolume": 2938,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 2070,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1404/07",
+      "installVolume": 2507,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 2326,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1404/08",
+      "installVolume": 1821,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 2820,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1404/09",
+      "installVolume": 2073,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 976,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1404/10",
+      "installVolume": 1294,
+      "installFail3": 1,
+      "installRate3": 0.0007727975270479134,
+      "produceVolume": 843,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1404/11",
+      "installVolume": 1048,
+      "installFail3": 6,
+      "installRate3": 0.0057251908396946565,
+      "produceVolume": 3515,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1404/12",
+      "installVolume": 634,
+      "installFail3": 18,
+      "installRate3": 0.028391167192429023,
+      "produceVolume": 1608,
+      "produceFail3": 2,
+      "produceRate3": 0.0012437810945273632
+    },
+    {
+      "cohort": "1405/01",
+      "installVolume": 699,
+      "installFail3": 17,
+      "installRate3": 0.024320457796852647,
+      "produceVolume": 331,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1405/02",
+      "installVolume": 823,
+      "installFail3": 9,
+      "installRate3": 0.010935601458080195,
+      "produceVolume": 1318,
+      "produceFail3": 1,
+      "produceRate3": 0.0007587253414264037
+    },
+    {
+      "cohort": "1405/03",
+      "installVolume": 804,
+      "installFail3": 5,
+      "installRate3": 0.006218905472636816,
+      "produceVolume": 675,
+      "produceFail3": 0,
+      "produceRate3": 0
+    },
+    {
+      "cohort": "1405/04",
+      "installVolume": 584,
+      "installFail3": 0,
+      "installRate3": 0,
+      "produceVolume": 306,
+      "produceFail3": 0,
+      "produceRate3": 0
+    }
+  ]
+}

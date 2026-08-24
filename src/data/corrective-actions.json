@@ -1,0 +1,122 @@
+[
+  {
+    "part": "رگلاژ پایه تنظیم لباسشویی",
+    "avgMonths": 7.2,
+    "count": 24,
+    "action": "تهیه چک لیست تنظیم محصول هنگام نصب",
+    "actionDate": "-",
+    "result": "در دست اقدام"
+  },
+  {
+    "part": "میکروسوئیچ 16 نفره",
+    "avgMonths": 6.1,
+    "count": 11,
+    "action": "اقدام اصلاحی",
+    "actionDate": "1404/08/06",
+    "result": "در حال بهبود"
+  },
+  {
+    "part": "نشتی پمپ ظرفشویی",
+    "avgMonths": 11.9,
+    "count": 9,
+    "action": "استحلاک طبیعی قطعه / بررسی دقیق تر نحوه مونتاژ",
+    "actionDate": "1405/05/25",
+    "result": "در دست اقدام"
+  },
+  {
+    "part": "برد لباسشویی",
+    "avgMonths": 8.7,
+    "count": 9,
+    "action": "نوسانات برق / ادرخواست پروژه داخلی سازی",
+    "actionDate": "1405/05/28",
+    "result": "در دست اقدام"
+  },
+  {
+    "part": "برد ساید بای ساید",
+    "avgMonths": 11.4,
+    "count": 5,
+    "action": "نوسانات برق / استحلاک",
+    "actionDate": "-",
+    "result": "-"
+  },
+  {
+    "part": "پمپ تخلیه ظرفشویی",
+    "avgMonths": 8.4,
+    "count": 5,
+    "action": "بررسی دقیق تر نحوه مونتاژ",
+    "actionDate": "-",
+    "result": "-"
+  },
+  {
+    "part": "لامپ مینی",
+    "avgMonths": 5,
+    "count": 5,
+    "action": "در دست بررسی",
+    "actionDate": "1405/05/20",
+    "result": "-"
+  },
+  {
+    "part": "میکروسوئیچ 15 نفره",
+    "avgMonths": 2.8,
+    "count": 5,
+    "action": "داخلی سازی قلاب میکروسوئیچ",
+    "actionDate": "در دست اقدام",
+    "result": "-"
+  },
+  {
+    "part": "شیر برقی لباسشویی",
+    "avgMonths": 7.8,
+    "count": 4,
+    "action": "بررسی دقیق تر شیربرقی هنگام شروع تولید",
+    "actionDate": "1405/05/28",
+    "result": "-"
+  },
+  {
+    "part": "برد تلویزیون",
+    "avgMonths": 7.3,
+    "count": 4,
+    "action": "در دست بررسی",
+    "actionDate": "1405/05/20",
+    "result": "-"
+  },
+  {
+    "part": "برد ظرفشویی",
+    "avgMonths": 9,
+    "count": 3,
+    "action": "نوسانات برق / ادرخواست پروژه داخلی سازی",
+    "actionDate": "1405/05/20",
+    "result": "در دست اقدام"
+  },
+  {
+    "part": "پمپ تخلیه لباسشویی",
+    "avgMonths": 7.7,
+    "count": 3,
+    "action": "در دست بررسی",
+    "actionDate": "1405/05/20",
+    "result": "-"
+  },
+  {
+    "part": "شیر برقی ظرفشویی",
+    "avgMonths": 7,
+    "count": 3,
+    "action": "در دست بررسی",
+    "actionDate": "1405/05/20",
+    "result": "-"
+  },
+  {
+    "part": "ترموستات مینی",
+    "avgMonths": 5.7,
+    "count": 3,
+    "action": "در دست بررسی",
+    "actionDate": "1405/05/20",
+    "result": "-"
+  },
+  {
+    "part": "واترجت ظرفشویی",
+    "avgMonths": 5.3,
+    "count": 3,
+    "action": "در دست بررسی",
+    "actionDate": "1405/05/20",
+    "result": "-"
+  }
+]

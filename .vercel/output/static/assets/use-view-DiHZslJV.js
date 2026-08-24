@@ -1,0 +1,1 @@
+import{f as e,n as t,o as n}from"./index-DjAaLWRU.js";function r(){let r=t(e=>e.rows),i=t(e=>e.filters),a=t(e=>e.selectedMonth),o=t(e=>e.setMonth),s=n(r,i);return{rowsAll:r,filtered:s,rows:e(s,a),month:a,setMonth:o,filters:i}}export{r as t};
