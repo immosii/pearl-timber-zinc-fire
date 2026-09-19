@@ -30,7 +30,7 @@ export function MonthRail({
               )}
             >
               <span className="text-[11px] font-medium">کل دوره</span>
-              <span className="text-[10px] opacity-70">سه ماه</span>
+              <span className="text-[10px] opacity-70">{toFaDigits(months.length)} ماه</span>
             </button>
           );
         }

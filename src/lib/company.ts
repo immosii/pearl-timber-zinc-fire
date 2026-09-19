@@ -5,7 +5,7 @@ export const COMPANY = {
   name: "آرتا گستر افق پارسیان",
   legal: "آرتا گستر افق پارسیان",
   desk: "خدمات پس از فروش",
-  periodLabel: "سه ماهه اول ۱۴۰۵",
+  periodLabel: "پنج‌ماهه اول ۱۴۰۵",
 };
 
 export const SEED_RECORDS = raw as ServiceRow[];

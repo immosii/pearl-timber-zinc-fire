@@ -1,4 +1,5 @@
 import * as XLSX from "xlsx";
+import { enrichRow, markRepeats } from "@/lib/enrich";
 import { pad2 } from "@/lib/jalali";
 import type { ServiceRow } from "@/lib/types";
 
@@ -137,7 +138,8 @@ export function parseWorkbook(buf: ArrayBuffer): ParseResult {
     });
   });
   if (rows.length === 0) warnings.push("هیچ ردیف خدماتی خوانده نشد.");
-  return { rows, warnings, sheets };
+  const enriched = markRepeats(rows.map(enrichRow));
+  return { rows: enriched, warnings, sheets };
 }
 
 const HEADERS = [
