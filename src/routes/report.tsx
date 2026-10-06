@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { buildInsights, computeKpis, groupBy } from "@/lib/analytics";
 import { COMPANY } from "@/lib/company";
-import { faNum, formatMoney, formatPctPlain } from "@/lib/format";
+import { faNum, formatPctPlain } from "@/lib/format";
 import { formatMonth } from "@/lib/jalali";
 import { compareMonthOf } from "@/lib/store";
 import { ALL_MONTHS } from "@/lib/types";
@@ -46,9 +46,9 @@ function ReportPage() {
         <section className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
           {[
             ["مراجعات", faNum(k.visits, 0)],
-            ["هزینه گارانتی", formatMoney(k.cost)],
-            ["میانگین هر مراجعه", formatMoney(k.avgCost)],
-            ["ضرر تکرار", formatMoney(k.repeatCost)],
+            ["مراجعه تکراری", faNum(k.repeats, 0)],
+            ["نوع دستگاه", faNum(k.products, 0)],
+            ["میانگین عمر (ماه)", faNum(k.avgAge, 1)],
           ].map(([l, v]) => (
             <div key={l} className="rounded-md bg-bg-subtle px-3 py-3">
               <p className="text-[11px] text-fg-muted">{l}</p>
@@ -77,7 +77,6 @@ function ReportPage() {
                   <tr key={p.name} className="border-t border-border">
                     <td className="py-2">{p.name}</td>
                     <td className="py-2 text-left tabular">{faNum(p.count, 0)}</td>
-                    <td className="py-2 text-left tabular">{formatMoney(p.cost)}</td>
                     <td className="py-2 text-left tabular text-fg-muted">{formatPctPlain(p.share, 0)}</td>
                   </tr>
                 ))}
@@ -115,7 +114,7 @@ function ReportPage() {
         </section>
 
         <footer className="mt-8 border-t border-border pt-3 text-[11px] text-fg-subtle">
-          تهیه شده در سامانه رصد از گزارش نصب و تعمیر خدمات پس از فروش. ارقام به تومان.
+          تهیه شده در سامانه رصد از گزارش نصب و تعمیر خدمات پس از فروش.
         </footer>
       </Card>
     </div>

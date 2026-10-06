@@ -16,7 +16,7 @@ export const Route = createRootRoute({
       { name: "theme-color", content: "#efeae1" },
       {
         name: "description",
-        content: "داشبورد خدمات پس از فروش آرتا گستر افق پارسیان — گارانتی، علت خرابی، هزینه و مراجعه تکراری",
+        content: "داشبورد خدمات پس از فروش آرتا گستر افق پارسیان — گارانتی، علت خرابی و مراجعه تکراری",
       },
     ],
     links: [

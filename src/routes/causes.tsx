@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/page-header";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { causePriority, groupBy } from "@/lib/analytics";
-import { faNum, formatMoney, formatPctPlain } from "@/lib/format";
+import { faNum, formatPctPlain } from "@/lib/format";
 import { useView } from "@/lib/use-view";
 
 export const Route = createFileRoute("/causes")({ component: CausesPage });
@@ -29,7 +29,6 @@ function CausesPage() {
                 <th className="px-4 py-2.5 text-left font-medium">تعداد</th>
                 <th className="px-4 py-2.5 text-left font-medium">سهم</th>
                 <th className="px-4 py-2.5 text-left font-medium">میانگین ماه</th>
-                <th className="px-4 py-2.5 text-left font-medium">هزینه</th>
                 <th className="px-4 py-2.5 text-right font-medium">اولویت</th>
               </tr>
             </thead>
@@ -42,7 +41,6 @@ function CausesPage() {
                     <td className="px-4 py-3 text-left tabular">{faNum(c.count, 0)}</td>
                     <td className="px-4 py-3 text-left tabular">{formatPctPlain(c.share, 1)}</td>
                     <td className="px-4 py-3 text-left tabular">{faNum(c.avgAge, 1)}</td>
-                    <td className="px-4 py-3 text-left tabular">{formatMoney(c.cost)}</td>
                     <td className="px-4 py-3">
                       <div className="flex flex-col items-end gap-1">
                         <Badge tone={p.tone}>{p.label}</Badge>

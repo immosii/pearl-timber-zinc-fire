@@ -13,7 +13,6 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ActionsRouteImport } from './routes/actions'
 import { Route as CausesRouteImport } from './routes/causes'
 import { Route as CohortsRouteImport } from './routes/cohorts'
-import { Route as CostRouteImport } from './routes/cost'
 import { Route as DataRouteImport } from './routes/data'
 import { Route as DevicesRouteImport } from './routes/devices'
 import { Route as LifetimeRouteImport } from './routes/lifetime'
@@ -39,11 +38,6 @@ const CausesRoute = CausesRouteImport.update({
 const CohortsRoute = CohortsRouteImport.update({
   id: '/cohorts',
   path: '/cohorts',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CostRoute = CostRouteImport.update({
-  id: '/cost',
-  path: '/cost',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DataRoute = DataRouteImport.update({
@@ -82,7 +76,6 @@ export interface FileRoutesByFullPath {
   '/actions': typeof ActionsRoute
   '/causes': typeof CausesRoute
   '/cohorts': typeof CohortsRoute
-  '/cost': typeof CostRoute
   '/data': typeof DataRoute
   '/devices': typeof DevicesRoute
   '/lifetime': typeof LifetimeRoute
@@ -95,7 +88,6 @@ export interface FileRoutesByTo {
   '/actions': typeof ActionsRoute
   '/causes': typeof CausesRoute
   '/cohorts': typeof CohortsRoute
-  '/cost': typeof CostRoute
   '/data': typeof DataRoute
   '/devices': typeof DevicesRoute
   '/lifetime': typeof LifetimeRoute
@@ -109,7 +101,6 @@ export interface FileRoutesById {
   '/actions': typeof ActionsRoute
   '/causes': typeof CausesRoute
   '/cohorts': typeof CohortsRoute
-  '/cost': typeof CostRoute
   '/data': typeof DataRoute
   '/devices': typeof DevicesRoute
   '/lifetime': typeof LifetimeRoute
@@ -124,7 +115,6 @@ export interface FileRouteTypes {
     | '/actions'
     | '/causes'
     | '/cohorts'
-    | '/cost'
     | '/data'
     | '/devices'
     | '/lifetime'
@@ -137,7 +127,6 @@ export interface FileRouteTypes {
     | '/actions'
     | '/causes'
     | '/cohorts'
-    | '/cost'
     | '/data'
     | '/devices'
     | '/lifetime'
@@ -150,7 +139,6 @@ export interface FileRouteTypes {
     | '/actions'
     | '/causes'
     | '/cohorts'
-    | '/cost'
     | '/data'
     | '/devices'
     | '/lifetime'
@@ -164,7 +152,6 @@ export interface RootRouteChildren {
   ActionsRoute: typeof ActionsRoute
   CausesRoute: typeof CausesRoute
   CohortsRoute: typeof CohortsRoute
-  CostRoute: typeof CostRoute
   DataRoute: typeof DataRoute
   DevicesRoute: typeof DevicesRoute
   LifetimeRoute: typeof LifetimeRoute
@@ -201,13 +188,6 @@ declare module '@tanstack/react-router' {
       path: '/cohorts'
       fullPath: '/cohorts'
       preLoaderRoute: typeof CohortsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cost': {
-      id: '/cost'
-      path: '/cost'
-      fullPath: '/cost'
-      preLoaderRoute: typeof CostRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/data': {
@@ -260,7 +240,6 @@ const rootRouteChildren: RootRouteChildren = {
   ActionsRoute: ActionsRoute,
   CausesRoute: CausesRoute,
   CohortsRoute: CohortsRoute,
-  CostRoute: CostRoute,
   DataRoute: DataRoute,
   DevicesRoute: DevicesRoute,
   LifetimeRoute: LifetimeRoute,

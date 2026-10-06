@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/page-header";
 import { RankTable } from "@/components/rank-table";
 import { Card, CardHeader, CardHint, CardTitle } from "@/components/ui/card";
 import { groupBy, heatmap } from "@/lib/analytics";
-import { faNum, formatMoney, formatPctPlain } from "@/lib/format";
+import { faNum, formatPctPlain } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import { useView } from "@/lib/use-view";
 
@@ -33,7 +33,7 @@ function DevicesPage() {
             <p className="text-xs text-fg-muted">{p.name}</p>
             <p className="mt-2 font-display text-2xl tabular">{faNum(p.count, 0)}</p>
             <p className="mt-1 text-[11px] text-fg-muted">
-              {formatPctPlain(p.share, 0)} · {formatMoney(p.cost)} · عمر {faNum(p.avgAge, 1)} ماه
+              {formatPctPlain(p.share, 0)} · عمر {faNum(p.avgAge, 1)} ماه
             </p>
           </Card>
         ))}

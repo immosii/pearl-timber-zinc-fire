@@ -147,23 +147,19 @@ export function parseWorkbook(buf: ArrayBuffer): ParseResult {
 const HEADERS = [
   "شماره پذیرش",
   "ماه",
+  "کد ماه",
   "نوع محصول",
-  "مدل محصول",
+  "مدل",
   "شماره سریال",
   "اظهار مشتری",
   "شرح خرابی",
   "تاریخ پذیرش",
   "تاریخ تولید",
   "تاریخ نصب",
-  "مدت زمان مصرف",
+  "مدت مصرف (ماه)",
   "دسته علت خرابی",
   "قطعه تعویضی",
-  "مشئول ایاب ذهاب",
-  "هزینه قطعه (تومان)",
-  "هزینه اجرت+ایاب‌وذهاب (تومان)",
-  "هزینه کل ردیف (تومان)",
-  "مراجعه تکراری؟ (سریال)",
-  "هزینه ضرر تکرار (تومان)",
+  "مراجعه تکراری",
 ];
 
 function toAoa(rows: ServiceRow[]) {
@@ -172,6 +168,7 @@ function toAoa(rows: ServiceRow[]) {
     ...rows.map((r) => [
       r.ticket,
       r.monthName,
+      r.month,
       r.product,
       r.model,
       r.serial,
@@ -182,13 +179,8 @@ function toAoa(rows: ServiceRow[]) {
       r.installDate.replace(/-/g, "/"),
       r.ageMonths,
       r.cause,
-      r.part || "*",
-      r.travelPayer,
-      r.partCost,
-      r.laborCost,
-      r.totalCost,
-      r.repeat ? "بله (تکراری)" : "خیر",
-      r.repeatCost,
+      r.part || "—",
+      r.repeat ? "بله" : "خیر",
     ]),
   ];
 }

@@ -238,12 +238,11 @@ export function buildInsights(rows: ServiceRow[]): Insight[] {
     });
   }
   const boards = rows.filter((r) => r.cause.includes("برد"));
-  const boardCost = sumBy(boards, (r) => r.partCost);
   if (boards.length >= 8) {
     out.push({
       tone: "warn",
-      title: "بار مالی برد الکترونیک",
-      body: `${fa(boards.length)} مورد تعویض برد با حدود ${money(boardCost)} تومان هزینه قطعه — بازبینی تأمین‌کننده برد اولویت هزینه است.`,
+      title: "تعویض برد الکترونیک",
+      body: `${fa(boards.length)} مورد تعویض برد ثبت شده — بازبینی تأمین‌کننده برد اولویت کیفیت است.`,
     });
   }
   const level = rows.filter((r) => r.cause.includes("تراز") || r.cause.includes("رگلاژ"));
@@ -259,7 +258,7 @@ export function buildInsights(rows: ServiceRow[]): Insight[] {
     out.push({
       tone: repeats.length / rows.length >= 0.12 ? "warn" : "info",
       title: "مراجعه تکراری",
-      body: `${fa(repeats.length)} ردیف روی سریال تکراری ثبت شده؛ هزینه ضرر تکرار ${money(sumBy(rows, (r) => r.repeatCost))} تومان است.`,
+      body: `${fa(repeats.length)} ردیف روی سریال تکراری ثبت شده است.`,
     });
   }
   if (topC && out.length < 5) {
@@ -274,11 +273,4 @@ export function buildInsights(rows: ServiceRow[]): Insight[] {
 
 function fa(n: number) {
   return n.toLocaleString("fa-IR", { maximumFractionDigits: 1 });
-}
-function money(n: number) {
-  const abs = Math.abs(n);
-  if (abs >= 1_000_000_000) {
-    return `${(abs / 1_000_000_000).toLocaleString("fa-IR", { maximumFractionDigits: 1 })} میلیارد`;
-  }
-  return `${(abs / 1_000_000).toLocaleString("fa-IR", { maximumFractionDigits: 1 })} میلیون`;
 }

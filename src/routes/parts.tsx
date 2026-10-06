@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/page-header";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { groupBy } from "@/lib/analytics";
-import { faNum, formatMoney } from "@/lib/format";
+import { faNum } from "@/lib/format";
 import { useView } from "@/lib/use-view";
 
 export const Route = createFileRoute("/parts")({ component: PartsPage });
@@ -31,7 +31,6 @@ function PartsPage() {
                 <th className="px-4 py-2.5 text-right font-medium">قطعه</th>
                 <th className="px-4 py-2.5 text-left font-medium">تعداد</th>
                 <th className="px-4 py-2.5 text-left font-medium">میانگین ماه</th>
-                <th className="px-4 py-2.5 text-left font-medium">هزینه</th>
                 <th className="px-4 py-2.5 text-right font-medium">وضعیت</th>
               </tr>
             </thead>
@@ -44,7 +43,6 @@ function PartsPage() {
                     <td className="px-4 py-3">{p.name}</td>
                     <td className="px-4 py-3 text-left tabular">{faNum(p.count, 0)}</td>
                     <td className="px-4 py-3 text-left tabular">{faNum(p.avgAge, 1)}</td>
-                    <td className="px-4 py-3 text-left tabular">{formatMoney(p.cost)}</td>
                     <td className="px-4 py-3 text-left">
                       {early ? (
                         <Badge tone="bad">زودهنگام</Badge>

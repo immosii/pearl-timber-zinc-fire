@@ -3,7 +3,7 @@ import { KpiCard } from "@/components/kpi-card";
 import { PageHeader } from "@/components/page-header";
 import { Card } from "@/components/ui/card";
 import { computeKpis, repeatSerials } from "@/lib/analytics";
-import { faNum, formatMoney, formatPctPlain } from "@/lib/format";
+import { faNum, formatPctPlain } from "@/lib/format";
 import { compareMonthOf } from "@/lib/store";
 import { useView } from "@/lib/use-view";
 
@@ -18,14 +18,13 @@ function RepeatsPage() {
     <div>
       <PageHeader title="مراجعه تکراری" kicker="سریال‌های چندباره">
         <p className="max-w-sm text-xs leading-relaxed text-fg-muted">
-          سریال‌هایی که بیش از یک پذیرش دارند. هزینه ضرر تکرار از فایل اکسل آمده است.
+          سریال‌هایی که بیش از یک پذیرش دارند.
         </p>
       </PageHeader>
 
-      <section className="grid grid-cols-2 gap-3 lg:grid-cols-3">
+      <section className="grid grid-cols-2 gap-3 lg:grid-cols-2">
         <KpiCard label="ردیف تکراری" value={faNum(k.repeats, 0)} hint={`${formatPctPlain(k.repeatShare, 0)} از مراجعات`} />
         <KpiCard label="سریال یکتا تکراری" value={faNum(serials.length, 0)} />
-        <KpiCard label="هزینه ضرر تکرار" value={formatMoney(k.repeatCost)} />
       </section>
 
       <Card className="mt-5 overflow-hidden rounded-lg p-0">
@@ -37,7 +36,6 @@ function RepeatsPage() {
                 <th className="px-4 py-2.5 text-right font-medium">دستگاه</th>
                 <th className="px-4 py-2.5 text-right font-medium">مدل</th>
                 <th className="px-4 py-2.5 text-left font-medium">تعداد مراجعه</th>
-                <th className="px-4 py-2.5 text-left font-medium">ضرر تکرار</th>
               </tr>
             </thead>
             <tbody>
@@ -47,7 +45,6 @@ function RepeatsPage() {
                   <td className="px-4 py-2.5">{s.product}</td>
                   <td className="px-4 py-2.5">{s.model}</td>
                   <td className="px-4 py-2.5 text-left tabular">{faNum(s.count, 0)}</td>
-                  <td className="px-4 py-2.5 text-left tabular">{formatMoney(s.cost)}</td>
                 </tr>
               ))}
             </tbody>

@@ -11,7 +11,7 @@ import { Select } from "@/components/ui/select";
 import { monthsOf } from "@/lib/analytics";
 import { SEED_RECORDS } from "@/lib/company";
 import { downloadTemplate, exportWorkbook, parseWorkbook } from "@/lib/excel";
-import { faNum, formatMoney } from "@/lib/format";
+import { faNum } from "@/lib/format";
 import { formatJalaliDate, formatMonth } from "@/lib/jalali";
 import { useReportStore } from "@/lib/store";
 import { ALL_MONTHS } from "@/lib/types";
@@ -223,7 +223,6 @@ function DataPage() {
                 <th className="pb-2 text-right font-medium">مدل</th>
                 <th className="pb-2 text-right font-medium">علت</th>
                 <th className="pb-2 text-left font-medium">عمر</th>
-                <th className="pb-2 text-left font-medium">هزینه</th>
               </tr>
             </thead>
             <tbody>
@@ -235,7 +234,6 @@ function DataPage() {
                   <td className="py-2.5 text-xs">{r.model}</td>
                   <td className="py-2.5 text-xs">{r.cause}</td>
                   <td className="py-2.5 text-left tabular">{faNum(r.ageMonths, 0)}</td>
-                  <td className="py-2.5 text-left tabular">{formatMoney(r.totalCost)}</td>
                 </tr>
               ))}
             </tbody>
