@@ -4,7 +4,7 @@ import { COMPANY, SEED_RECORDS } from "@/lib/company";
 import { prevMonth } from "@/lib/jalali";
 import { ALL_MONTHS, type DataSource, type GlobalFilters, type ImportLog, type ServiceRow } from "@/lib/types";
 
-const STORAGE_KEY = "rasad-arta-v3";
+const STORAGE_KEY = "rasad-arta-v4";
 
 type Persisted = {
   rows: ServiceRow[];
@@ -43,7 +43,7 @@ export const useReportStore = create<ReportState>((set, get) => ({
   ready: false,
   rows: SEED_RECORDS,
   source: "seed",
-  fileName: "خدمات_پس_از_فروش_ارتا_پنج_ماهه.xlsm",
+  fileName: "خدمات_پس_از_فروش_آرتا.xlsx",
   lastImportAt: null,
   importLog: [],
   selectedMonth: ALL_MONTHS,
@@ -109,7 +109,7 @@ export const useReportStore = create<ReportState>((set, get) => ({
     const next: Persisted = {
       rows: SEED_RECORDS,
       source: "seed",
-      fileName: "خدمات_پس_از_فروش_ارتا_پنج_ماهه.xlsm",
+      fileName: "خدمات_پس_از_فروش_آرتا.xlsx",
       lastImportAt: null,
       importLog: [],
     };

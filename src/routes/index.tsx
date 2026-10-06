@@ -25,7 +25,7 @@ import {
   monthsOf,
 } from "@/lib/analytics";
 import { COMPANY } from "@/lib/company";
-import { faNum, formatMoney, formatPctPlain } from "@/lib/format";
+import { faNum, formatPctPlain } from "@/lib/format";
 import { formatMonth, formatMonthShort } from "@/lib/jalali";
 import { compareMonthOf } from "@/lib/store";
 import { ALL_MONTHS } from "@/lib/types";
@@ -64,10 +64,9 @@ function Home() {
           hint={`${faNum(k.products, 0)} نوع دستگاه / ${faNum(k.models, 0)} مدل`}
         />
         <KpiCard
-          label="هزینه گارانتی"
-          value={formatMoney(k.cost)}
-          delta={showDelta ? k.costDelta : undefined}
-          hint={`میانگین ${formatMoney(k.avgCost)} هر مراجعه`}
+          label="مراجعه تکراری"
+          value={faNum(k.repeats, 0)}
+          hint={`سهم ${formatPctPlain(k.repeatShare, 0)} از کل`}
         />
         <KpiCard
           label="پرتکرارترین دستگاه"

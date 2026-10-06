@@ -29,7 +29,7 @@ const ALIASES: Record<string, string[]> = {
   acceptDate: ["تاریخ پذیرش"],
   produceDate: ["تاریخ تولید"],
   installDate: ["تاریخ نصب"],
-  ageMonths: ["مدت زمان مصرف", "عمر", "ماه تا خرابی"],
+  ageMonths: ["مدت زمان مصرف", "مدت مصرف (ماه)", "مدت مصرف", "عمر", "ماه تا خرابی"],
   cause: ["دسته علت خرابی", "علت خرابی", "علت"],
   part: ["قطعه تعویضی", "قطعه"],
   travelPayer: ["مشئول ایاب ذهاب", "مسئول ایاب ذهاب", "ایاب و ذهاب"],
@@ -38,6 +38,7 @@ const ALIASES: Record<string, string[]> = {
   totalCost: ["هزینه کل ردیف (تومان)", "هزینه کل"],
   repeat: ["مراجعه تکراری؟ (سریال)", "مراجعه تکراری"],
   repeatCost: ["هزینه ضرر تکرار (تومان)", "ضرر تکرار"],
+  monthCode: ["کد ماه"],
 };
 
 function fa(s: unknown): string {
@@ -108,6 +109,7 @@ export function parseWorkbook(buf: ArrayBuffer): ParseResult {
     if (!row || row.every((c) => fa(c) === "")) return;
     const acceptDate = jalaliIso(idx.acceptDate != null ? row[idx.acceptDate] : "");
     const monthName = fa(idx.monthName != null ? row[idx.monthName] : "");
+    const monthCode = fa(idx.monthCode != null ? row[idx.monthCode] : "");
     const part = fa(idx.part != null ? row[idx.part] : "");
     const repeatRaw = fa(idx.repeat != null ? row[idx.repeat] : "");
     const ticket = fa(idx.ticket != null ? row[idx.ticket] : i + 1);
@@ -117,7 +119,7 @@ export function parseWorkbook(buf: ArrayBuffer): ParseResult {
       id: `${ticket}-${i}`,
       ticket,
       monthName,
-      month: monthKey(monthName, acceptDate),
+      month: /^\d{4}-\d{2}$/.test(monthCode) ? monthCode : monthKey(monthName, acceptDate),
       product: fa(idx.product != null ? row[idx.product] : "") || "نامشخص",
       model: fa(idx.model != null ? row[idx.model] : "") || "—",
       serial: fa(idx.serial != null ? row[idx.serial] : ""),
